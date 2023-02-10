@@ -37,7 +37,7 @@ class DataLoader implements ApplicationRunner {
     }
 
     @Override
-    public void run(ApplicationArguments args) throws Exception {
+    public void run(ApplicationArguments args) {
         ObjectMapper mapper = new ObjectMapper();
         TypeReference<List<Rate>> typeReference = new TypeReference<>(){};
         InputStream inputStream = TypeReference.class.getResourceAsStream("/json/rates.json");
@@ -45,7 +45,7 @@ class DataLoader implements ApplicationRunner {
             List<Rate> rates = mapper.readValue(inputStream,typeReference);
             rateRepository.saveAll(rates);
         } catch (IOException e){
-            System.out.println("Unable to save users: " + e.getMessage());
+            System.out.println("Unable to rates users: " + e.getMessage());
         }
     }
 }

@@ -5,6 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * EU VAT rate POJO class
+ *
+ */
 @Getter
 @Setter
 @Entity

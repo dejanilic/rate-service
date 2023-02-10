@@ -7,6 +7,10 @@ import lombok.Setter;
 
 import java.util.List;
 
+/**
+ * EU VAT rate response class.
+ *
+ */
 @Getter
 @Setter
 @AllArgsConstructor
