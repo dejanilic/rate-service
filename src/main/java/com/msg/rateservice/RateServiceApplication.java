@@ -45,7 +45,7 @@ class DataLoader implements ApplicationRunner {
             List<Rate> rates = mapper.readValue(inputStream,typeReference);
             rateRepository.saveAll(rates);
         } catch (IOException e){
-            System.out.println("Unable to rates users: " + e.getMessage());
+            System.out.println("Unable to save rates: " + e.getMessage());
         }
     }
 }
